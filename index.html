@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Globe</title>
+</head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+
+<body>
+			
+<style type="text/css">
+body, p, h1, h2, h3, h4, h5, ul, li, u{
+	    color: #333;
+font-family: 'Open Sans', sans-serif;
+}
+/*Media Query Small for Table*/
+@media (max-width: 992px){
+	/*Code Here*/
+}
+/*Media Query XS*/
+@media (max-width: 767px){
+	/*Code Here*/
+}
+</style>
+
+
+
+
+
+
+
+<style type="text/css">
+
+.cb-slideshow,
+.cb-slideshow:after {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    top: 0px;
+    left: 0px;
+    z-index: 0;
+}
+.cb-slideshow:after {
+    content: '';
+    background: transparent url(../images/pattern.png) repeat top left;
+}
+.cb-slideshow li span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+    -webkit-animation: imageAnimation 36s linear infinite 0s;
+    -moz-animation: imageAnimation 36s linear infinite 0s;
+    -o-animation: imageAnimation 36s linear infinite 0s;
+    -ms-animation: imageAnimation 36s linear infinite 0s;
+    animation: imageAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div {
+    z-index: 1000;
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-animation: titleAnimation 36s linear infinite 0s;
+    -moz-animation: titleAnimation 36s linear infinite 0s;
+    -o-animation: titleAnimation 36s linear infinite 0s;
+    -ms-animation: titleAnimation 36s linear infinite 0s;
+    animation: titleAnimation 36s linear infinite 0s;
+}
+.cb-slideshow li div h3 {
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-size: 160px;
+    padding: 0 30px;
+    line-height: 120px;
+    color: rgba(255,255,255,0.8);
+}
+.cb-slideshow li:nth-child(1) span { background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG-min.jpg);
+
+}
+.cb-slideshow li:nth-child(2) span {
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG2-min.jpg);
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG3-min.jpg);
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG4-min.jpg);
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG5-min.jpg);
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+
+.cb-slideshow li:nth-child(2) div {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -o-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s;
+}
+.cb-slideshow li:nth-child(3) div {
+    -webkit-animation-delay: 12s;
+    -moz-animation-delay: 12s;
+    -o-animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    animation-delay: 12s;
+}
+.cb-slideshow li:nth-child(4) div {
+    -webkit-animation-delay: 18s;
+    -moz-animation-delay: 18s;
+    -o-animation-delay: 18s;
+    -ms-animation-delay: 18s;
+    animation-delay: 18s;
+}
+.cb-slideshow li:nth-child(5) div {
+    -webkit-animation-delay: 24s;
+    -moz-animation-delay: 24s;
+    -o-animation-delay: 24s;
+    -ms-animation-delay: 24s;
+    animation-delay: 24s;
+}
+
+/* Animation for the slideshow images */
+@-webkit-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -webkit-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -webkit-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -moz-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -moz-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -o-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -o-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes imageAnimation { 
+    0% { opacity: 0;
+    -ms-animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         -ms-animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes imageAnimation { 
+    0% { opacity: 0;
+    animation-timing-function: ease-in; }
+    8% { opacity: 1;
+         animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+/* Animation for the title */
+@-webkit-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-moz-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-o-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@-ms-keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+@keyframes titleAnimation { 
+    0% { opacity: 0 }
+    8% { opacity: 1 }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/* Show at least something when animations not supported */
+.no-cssanimations .cb-slideshow li span{
+    opacity: 1;
+}
+/* CSS Clock */
+p#cntdwn-timer {
+  margin-bottom: 10px;
+  font-size: 4vw;
+  font-weight: bold;
+  color: #ee2324;
+}
+p#cntdwn-timer span{
+ font-size:1.6vw;
+ color: #fff;
+ font-weight: normal !important;
+ margin-left: 3px;
+}
+
+
+/* General Demo Style */
+
+.marvel-demo{
+    background: #000;
+    position: relative;
+}
+.marvel-demo ol,ul {
+    list-style:none;
+}
+
+.marvel-demo .container{
+    position: absolute;
+    padding: 15px 10px 3px 20px;
+    top: 35px;
+    left: 25px;
+    background: rgba(0, 0, 0, 0.62);
+    width: 47% !important;
+}
+
+.marvel-countdown{
+	 position: absolute !important;
+    padding: 2% 20px 3px 20px;
+    right: 35px;
+    top: 90px;
+   
+    height: 200px;
+    background-size: 100% 100%;
+    background-position: center top
+    background-repeat:no-repeat;
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-Frame4-min.png); 
+
+}
+.images0917{
+	
+	right: 35px;
+	float: right !important;
+	position: relative;
+}
+.images0917 img{
+	display: block;
+	margin: auto;
+}
+.absolute-container{
+	top: 20%;
+    right: 35px;
+    position: absolute;
+    width: 100%;
+}
+
+.count-hours, .count-minutes, .count-seconds{
+	width: 33.3333%;
+	float: left;
+	text-align: center;
+}
+.marvel-countdown h1{
+	color: #fff;
+	font-size: 75px;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+.marvel-countdown p{
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #B77431;
+    width: 75%;
+    text-align: center;
+    margin: auto;
+}
+.flex{display: flex;}
+
+
+.copyright-countdown{
+	    margin-top: -40px;
+}
+.copyright-countdown p{
+	z-index: 1;
+    color: #fff;
+    position: relative;
+}
+.content-countdown{
+	right: 35px;
+	position: absolute !important;
+	text-align: center;
+	top: 515%;
+}
+.content-countdown p{
+	color: #fff;
+}
+
+.flex > div:last-child{ margin-left: 20px; }
+
+@media screen and (max-width: 1566px) {
+   
+.marvel-countdown{   
+    height: 200px;
+}
+
+.cb-slideshow li span {
+
+
+      background-size: 1500px 700px;
+}
+
+
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+   
+}
+@media (max-width: 992px){
+	/*Code Here*/
+
+.marvel-countdown{
+	height: 175px;
+}
+.absolute-container{
+	right: 0px;
+}
+
+
+
+}
+
+
+
+
+
+@media screen and (max-width: 767px) {
+ 
+.marvel-countdown{
+	width: 95%;
+	height: auto;
+	padding-top: 3%;
+	padding-bottom: 3%;
+    margin-left: 5%;
+    left: 0px;
+    right: 0px;
+    top: 70px; 
+}
+.images0917{
+	width: 95%;
+	
+	margin: auto;
+	left: 0px;
+	right: 0px;
+}
+.copyright-countdown p{
+	font-size: 12px;
+}
+.images0917 img{
+	width: 60%;
+}
+.marvel-countdown h1{
+	font-size: 43px;
+
+}
+
+.marvel-countdown p{
+	font-size: 14px;
+}
+.absolute-container{
+	
+	width: 100%;
+	top: 60%;
+	width: 95%;
+	left: 0px;
+	right: 0px;
+}
+.content-countdown{
+
+	top: 315%;
+	right: 0px;
+	left: 0px;
+	margin-left: 5%;
+	padding: 0px;
+}
+
+
+.cb-slideshow li:nth-child(1) span { background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG11-Mobile-min.jpg);
+
+}
+.cb-slideshow li:nth-child(2) span {
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG12-Mobile-min.jpg);
+  
+}
+.cb-slideshow li:nth-child(3) span {
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG13-Mobile-min.jpg);
+}
+.cb-slideshow li:nth-child(4) span {
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG14-Mobile-min.jpg);
+}
+.cb-slideshow li:nth-child(5) span {
+    background-image: url(https://d11fuji4mn7bm2.cloudfront.net/media/data/Landing-Page/Marvel-Countdown/Marvel-Countdown-BG15-Mobile-min.jpg);
+  
+}
+
+.cb-slideshow li span {
+    background-size:cover;
+}
+.content-countdown p{
+	font-size: 14px;
+}
+
+
+}
+
+
+@media screen and (max-width: 578px) {
+
+.cb-slideshow li span {
+    background-size: 576px 700px;
+}
+
+
+
+}
+
+
+@media screen and (max-width: 414px) {
+
+ 
+.images0917 img{
+	width: 70%;
+}
+
+
+.marvel-countdown{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+.content-countdown{
+
+	top: 355%;
+}
+.absolute-container{
+
+	top: 60%;
+}
+
+
+}
+
+@media screen and (max-width: 375px) {
+ 
+.marvel-countdown{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.images0917 img{
+	width: 80%;
+}
+
+.content-countdown{
+
+	top: 350%;
+}
+.absolute-container{
+
+	top: 58%;
+}
+
+
+
+}
+@media screen and (max-width: 320px) {
+.marvel-countdown{
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.images0917 img{
+	width: 80%;
+	margin-top: 5%;
+}
+
+.absolute-container{
+
+	top: 58%;
+}
+.marvel-countdown p{
+	font-size: 12px;
+}
+
+.marvel-countdown{
+	top: 80px;
+}
+  
+}
+
+</style>
+
+  <div class="marvel-demo">
+        <ul class="cb-slideshow">
+            <li><span>image 1</span></li>
+            <li><span>image 2</span></li>
+            <li><span>image 3</span></li>
+            <li><span>image 4</span></li>
+            <li><span>image 5</span></li>
+           
+        </ul>
+
+  </div>
+
+
+  <div class="absolute-container">
+  	<div class="images0917 col-lg-4 col-md-4 col-sm-6">
+  		<img src="https://shps3dv01.s3.amazonaws.com/media/data/Happy-917-2018/917-Globe-Lifestyle-Logo.png" alt="O917 GlobeLifestyle">
+  	</div>
+			  <div class="marvel-countdown col-lg-4 col-md-4 col-sm-6">
+			  		<div class="count-hours">
+			  			<h1 id="hours"></h1>
+			  			<p>HOURS</p>
+			  		</div>
+			  		<div class="count-minutes">
+			  			<h1 id="minutes"></h1>
+			  			<p>MINUTES</p>
+			  		</div>
+
+
+			  		<div class="count-seconds">
+			  			<h1 id="seconds"></h1>
+			  			<p>SECONDS</p>
+			  		</div>
+
+			  </div>
+
+	<div class="content-countdown col-lg-4 col-md-4 col-sm-6 text-center">
+		<p>until your heroes face the wrath of Thanos. <br>Be the first to get <strong>Marvel’s Avengers: Infinity War</strong> apparel here at the Globe Online Shop!</p>
+	</div>	
+
+ </div>
+
+ <div class="container-fluid copyright-countdown">
+ 	<p class="text-right">&copy; 2018 MARVEL</p>
+ </div>
+
+
+
+  <script>
+// Set the date we're counting down to
+var countDownDate = new Date("September 14, 2018 09:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+    
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) );
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+   	
+   
+     var result = days * 24 + hours;
+    // Output the result in an element with id="demo"
+    document.getElementById("hours").innerHTML =  result;
+    document.getElementById("minutes").innerHTML =  minutes;
+    document.getElementById("seconds").innerHTML =  seconds;
+
+
+   	if(result ==""){
+
+   		result ="0";
+   	}
+   	else if(minutes==""){
+   		minutes ="0";
+   	}
+    
+    // If the count down is over, write some text 
+    if (distance < 0) {
+        clearInterval(x);
+        result ="0";
+        minutes ="0";
+    }
+
+}, 1000);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
